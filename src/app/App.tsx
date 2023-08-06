@@ -1,7 +1,7 @@
 import React from 'react';
 import './style/style.scss'
 import {Layout} from 'antd';
-import SiderComponent from "shared/ui/SiderComponent/SiderComponent";
+import PagesComponent from "pages/PagesComponent";
 import MainComponent from "shared/ui/MainComponent/MainComponent";
 
 const App: React.FC = () => {
@@ -9,7 +9,7 @@ const App: React.FC = () => {
 
     return (
         <Layout>
-            <SiderComponent/>
+            <PagesComponent/>
             <MainComponent/>
         </Layout>
     );

@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import {Layout, Menu} from "antd";
 const {Sider} = Layout;
+import './PagesComponent.scss'
 
 interface SiderInterface {
     className?: string;
 }
 
-const SiderComponent: React.FC<SiderInterface> = () => {
+const PagesComponent: React.FC<SiderInterface> = () => {
 
     const [collapsed, setCollapsed] = useState(false);
 
@@ -14,7 +15,7 @@ const SiderComponent: React.FC<SiderInterface> = () => {
         <Sider trigger={null} collapsible collapsed={collapsed} style={{backgroundColor: '#95d4f7'}}>
             <div className="demo-logo-vertical"/>
             <Menu
-                style={{backgroundColor: '#95d4f7'}}
+                className="links"
                 mode="inline"
                 defaultSelectedKeys={['1']}
                 items={[
@@ -36,4 +37,4 @@ const SiderComponent: React.FC<SiderInterface> = () => {
     );
 };
 
-export default SiderComponent;
+export default PagesComponent;

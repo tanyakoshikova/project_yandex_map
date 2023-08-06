@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Button, Layout} from "antd";
 import {MenuFoldOutlined, MenuUnfoldOutlined} from "@ant-design/icons";
+import './HeaderComponent.scss'
 
 const {Header} = Layout;
 
@@ -14,16 +15,11 @@ const HeaderComponent: React.FC<HeaderInterface> = () => {
 
     return (
         <Layout>
-            <Header style={{padding: 0, background: '#95d4f7'}}>
+            <Header className="header">
                 <Button
-                    type="text"
+                    type="text" className="burgerButton"
                     icon={collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}
                     onClick={() => setCollapsed(!collapsed)}
-                    style={{
-                        fontSize: '16px',
-                        width: 64,
-                        height: 64,
-                    }}
                 />МОИ УНИКАЛЬНЫЕ МЕСТА
             </Header>
         </Layout>
